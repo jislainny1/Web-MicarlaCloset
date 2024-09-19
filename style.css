@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fbeaea;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 150px;
+}
+
+.search-bar form {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    background-color: #ff6b6b;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin-left: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-bar button svg {
+    fill: white;
+}
+
+.user-cart {
+    display: flex;
+    align-items: center;
+}
+
+.user-cart a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 20px;
+}
+
+.user-cart svg {
+    margin-right: 5px;
+}
+
+
+.menu {
+    background-color: #ff6b6b;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon svg {
+    width: 30px;
+    height: 30px;
+    fill: #333;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu ul li {
+    display: inline;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    background-color: #ff4b4b;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+    }
+
+  
+    .menu.active {
+        display: block;
+        background-color: #ff6b6b;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu.active ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    .section-shorts .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.section-lancamentos {
+    padding: 20px;
+    text-align: center;
+}
+
+.section-carrosel {
+    padding: 40px;
+    background-color: #fbeaea;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #ff6b6b;
+    border-radius: 50%;
+}
+
+#carrosel2 .carousel-item img {
+    width: 100%; 
+    max-width: 1300px; 
+    height: auto; 
+    max-height: 700px; 
+    margin: 0 auto; 
+}
+
+@media (max-width: 768px) {
+    #carrosel2 .carousel-item img {
+      max-width: 100%;
+      max-height: 700px;
+    }
+}
+
+footer {
+    background-color: #f5f5f5;
+    padding: 30px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.newsletter {
+    margin-bottom: 20px;
+}
+
+.newsletter input[type="email"],
+.newsletter input[type="nome"] {
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.newsletter input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.social-media ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.social-media ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.logo {
+    text-align: left;
+}
+
+main {
+    background-color: #fbeaea;
+}
+
+.carousel-caption {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5); 
+    color: white; 
+    text-align: center;
+    padding: 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.buy-button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #ff4b4b;
+}
+
+.cart-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(138, 136, 136, 0.479);
+    color: white;
+    padding: 20px;
+}
+
